@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  lector-606:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      # Asegúrate de pasar tu GEMINI_API_KEY como variable de entorno
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    restart: unless-stopped
